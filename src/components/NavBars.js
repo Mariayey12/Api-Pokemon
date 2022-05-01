@@ -33,8 +33,8 @@ const NavBars = () => {
                             Listar
                         </Link></Nav.Link>
 
-                        <Nav.Link><Link to="/formik">
-                            Formik
+                        <Nav.Link><Link to="/pokemon">
+                            Pokemon
                         </Link></Nav.Link>
 
                         <Nav.Link><Link to="/search">
@@ -42,8 +42,8 @@ const NavBars = () => {
                         </Link></Nav.Link>
                     
                     </Nav>
-                    <Nav.Link><Link to="/cargarApi">
-                            Cargar Api
+                    <Nav.Link><Link to="/cards">
+                            Tarjetas
                         </Link></Nav.Link>
                     <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
                 </Container>

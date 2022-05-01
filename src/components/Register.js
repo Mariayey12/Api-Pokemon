@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useForm } from '../Hooks/useForm';
 import { registerAsync} from '../redux/actions/actionRegister';
-import"../../Style/Registro.css"
+import"../../style/Registro.css"
 
 const Register = () => {
     const dispatch = useDispatch()

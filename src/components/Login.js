@@ -8,7 +8,7 @@ import {
   loginFacebook,
   loginGoogle,
 } from "../redux/actions/actionLogin";
-import "../../Style/Login.css";
+import "../../style/Login.css";
 const Login = () => {
   const dispatch = useDispatch();
   const [values, handleInputChange, reset] = useForm({

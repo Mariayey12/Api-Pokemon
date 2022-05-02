@@ -22,7 +22,7 @@ const Editar = ({ modal, setModal }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-      //  console.log(values)
+      
        dispatch(editAsync(codigo, values))
        console.log( values)
       handleClose()

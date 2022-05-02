@@ -3,7 +3,7 @@ import { Button, Image, Table } from 'react-bootstrap';
 import ReactImageMagnify from 'react-image-magnify';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteAsync, listAsyn } from '../redux/actions/actionPokes';
-import Editaar from './Editar';
+import Editar from './Editar';
 
 const Listar = () => {
     const dispatch = useDispatch()

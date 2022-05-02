@@ -28,7 +28,7 @@ export const searchSync = (pokesBuscar)=>{
 
 //---------------------Edit-----------//
 export const editAsync = (codigo, poke)=>{
-   // console.log(codigo, planta)
+   
     return async (dispatch)=>{
         const  colleccionTraer = collection(baseDato, "plantasBD")
         const q = query(colleccionTraer, where("codigo", "==", codigo))
@@ -38,10 +38,10 @@ export const editAsync = (codigo, poke)=>{
             id= docu.id
         })
         console.log(id)
-        const documenRef = doc(baseDato, "plantasBD", id)
-       await updateDoc(documenRef, planta)
+        const documenRef = doc(baseDato, "pokemonBD", id)
+       await updateDoc(documenRef, poke)
         .then(resp => {
-            dispatch(editSync(planta))
+            dispatch(editSync(poke))
          
             console.log(resp)
          })       
@@ -51,10 +51,10 @@ export const editAsync = (codigo, poke)=>{
 }
 
 
-export const editSync = (planta)=>{
+export const editSync = (poke)=>{
     return{
-        type: typesPlantas.edit,
-        payload: planta
+        type: typesPokes.edit,
+        payload: poke
     }
    
 }
@@ -63,11 +63,11 @@ export const editSync = (planta)=>{
 export const deleteAsync = (codigo)=>{
   
     return async (dispatch)=>{
-        const  colleccionTraer = collection(baseDato , "plantasBD")
+        const  colleccionTraer = collection(baseDato , "pokemonBD")
         const q = query(colleccionTraer, where("codigo", "==", codigo))
         const traerDatosQ = await getDocs(q)
         traerDatosQ.forEach((docum =>{
-            deleteDoc(doc(baseDato, "plantasBD", docum.id))
+            deleteDoc(doc(baseDato, "pokemonBD", docum.id))
         }))
         dispatch(deleteSync(codigo))
         dispatch(listAsyn())
@@ -76,7 +76,7 @@ export const deleteAsync = (codigo)=>{
 
 export const deleteSync = (codigo)=>{
     return{
-        type: typesPlantas.delete,
+        type: typesPokes.delete,
         payload: codigo
     }
    
@@ -85,34 +85,34 @@ export const deleteSync = (codigo)=>{
 //---------------listar----------------//
 export const listAsyn =()=>{
     return async (dispatch)=>{
-        const  colleccionTraer = await getDocs(collection(baseDato , "plantasBD"))
-        const plantas = []
+        const  colleccionTraer = await getDocs(collection(baseDato , "pokemonBD"))
+        const pokemons = []
         colleccionTraer.forEach((doc)=>{
-            plantas.push({
+            pokes.push({
                 ...doc.data()
                 
 
             })
         })
-        dispatch(listSync(plantas))
+        dispatch(listSync(pokes))
         
     }
 }
 
-export const listSync = (planta)=>{
+export const listSync = (poke)=>{
     return{
-        type: typesPlantas.list ,
-        payload: planta 
+        type: typesPokes.list ,
+        payload: poke 
     }
    
 }
 
 //-------------agregar---------------//
-export const addAsync =(planta)=>{
+export const addAsync =(poke)=>{
     return(dispatch)=>{
-        addDoc(collection(baseDato, "plantasBD"), planta)
+        addDoc(collection(baseDato, "pokemonBD"), poke)
         .then(resp =>{
-            dispatch(addSync(planta))
+            dispatch(addSync(poke))
           //  dispatch(listAsyn())
         })
         .catch(error=>{
@@ -121,10 +121,10 @@ export const addAsync =(planta)=>{
 }
 }
 
-export const addSync =(planta)=>{
+export const addSync =(poke)=>{
     return{
-        type: typesPlantas.add,
-        payload: planta,
+        type: typesPokes.add,
+        payload: poke,
     }
 }
 
@@ -147,7 +147,7 @@ export const addFormikAsync=(user)=>{
 
 export const addFormikSync =(user)=>{
     return{
-        type: typesPlantas.addFormik,
+        type: typesPokes.addFormik,
         payload: user,
     }
 }

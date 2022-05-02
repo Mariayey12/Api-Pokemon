@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import * as Yup from 'yup'
 import { searchAsync } from '../redux/actions/actionPokes';
-import List from './Listar';
+import Listar from './Listar';
 
 const Search = () => {
     const dispatch = useDispatch()
@@ -28,7 +28,7 @@ const Search = () => {
                     <Button type="submit">Search</Button>
                 </form>
             </center>
-                <List/>
+                <Listar/>
         </div>
     );
 };

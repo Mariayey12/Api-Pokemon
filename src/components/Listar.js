@@ -3,7 +3,7 @@ import { Button, Image, Table } from 'react-bootstrap';
 import ReactImageMagnify from 'react-image-magnify';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteAsync, listAsyn } from '../redux/actions/actionPokes';
-import Edit from './Editar';
+import Editaar from './Editar';
 
 const Listar = () => {
     const dispatch = useDispatch()
@@ -34,7 +34,7 @@ const Listar = () => {
                 </thead>
                 <tbody>
                     {
-                        plantas.map((poke, index) => (
+                        pokes.map((poke, index) => (
                             <tr key={index}>
                                 <td>
                                     <ReactImageMagnify {...{

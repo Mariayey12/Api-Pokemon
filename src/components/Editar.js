@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { useForm } from '../Hooks/useForm';
 import { editAsync } from '../redux/actions/actionPokes';
 
-const Edit = ({ modal, setModal }) => {
+const Editar = ({ modal, setModal }) => {
 
     const dispatch = useDispatch()
     const [show, setShow] = useState(true);
@@ -14,11 +14,11 @@ const Edit = ({ modal, setModal }) => {
         nombre: modal.nombre,
         codigo: modal.codigo,
         descripcion: modal.descripcion,
-        precio: modal.precio
+        
 
     })
 
-    const { nombre, codigo, descripcion, precio} = values
+    const { nombre, codigo, descripcion} = values
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -33,12 +33,12 @@ const Edit = ({ modal, setModal }) => {
             <>
                 <Modal show={show} onHide={handleClose}>
                     <Modal.Header closeButton>
-                        <Modal.Title>Editar Planta</Modal.Title>
+                        <Modal.Title>Editar </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         <Form onSubmit={()=>handleSubmit()}>
                             <Form.Group className="mb-3" controlId="formBasicEmail">
-                                <Form.Label>Nombre de la Planta</Form.Label>
+                                <Form.Label>Nombre de la Pokemon</Form.Label>
                                 <Form.Control type="text" name="nombre" placeholder="Enter nombre" value={nombre} onChange={handleInputChange} />
 
                                 <Form.Label>Descripcion</Form.Label>
@@ -47,9 +47,7 @@ const Edit = ({ modal, setModal }) => {
                                 <Form.Label>Codigo</Form.Label>
                                 <Form.Control type="text" name="codigo" placeholder="El codigo contine dos letras y 3 numeros" value={codigo} onChange={handleInputChange} />
 
-                                <Form.Label>Precio</Form.Label>
-                                <Form.Control type="text" name="precio" placeholder="El precio en Pesos Colombiano" value={precio} onChange={handleInputChange} />
-
+                            
                             </Form.Group>
 
                             <Button variant="secondary" onClick={handleClose}>
@@ -69,4 +67,4 @@ const Edit = ({ modal, setModal }) => {
     );
 };
 
-export default Edit;
+export default Editar;

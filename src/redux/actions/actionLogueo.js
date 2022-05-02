@@ -1,6 +1,6 @@
 import { getAuth, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth"
 import { google,facebook } from "../../Firebase/firebaseConfig"
-import { typesLogin } from "../types/types"
+import { typesLogueo } from "../types/types"
 
 
 //--------------------Logout----------------------

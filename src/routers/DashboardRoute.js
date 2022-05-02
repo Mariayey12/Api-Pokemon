@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import Home from '../components/Home';
-import List from '../components/Listar';
+import Listar from '../components/Listar';
 import NavBars from '../components/NavBars';
 import Search from '../components/Search';
 import Pokemon from'../components/pagina/Pokemon'

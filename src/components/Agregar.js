@@ -14,7 +14,6 @@ const Agregar = () => {
         codigo: '',
         descripcion: '',
         tipo: '',
-        precio: '',
         foto: ''
         
     })
@@ -48,7 +47,7 @@ const Agregar = () => {
         <div>
              <Form onSubmit={handleSubmit} margin={50}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Nombre de la Planta</Form.Label>
+                    <Form.Label>Nombre de la Pokemon</Form.Label>
                     <Form.Control type="text" name="nombre" placeholder="Enter nombre" value={nombre} onChange={handleInputChange} />
 
                     <Form.Label>Descripcion</Form.Label>
@@ -72,7 +71,7 @@ const Agregar = () => {
              
             </Form>
 
-            <List/>
+            <Listar/>
         </div>
     );
 };

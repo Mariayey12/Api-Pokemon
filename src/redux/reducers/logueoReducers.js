@@ -1,14 +1,14 @@
-import { typesLogin } from "../types/types";
+import { typesLogueo } from "../types/types";
 
 
-export const loginReducers =(state ={}, action)=>{
+export const logueoReducers =(state ={}, action)=>{
     switch (action.type) {
-        case typesLogin.login:
+        case typesLogueo.logueo:
            return{
               id: action.payload.email,
                name: action.payload.password
            }
-           case typesLogin.logout:
+           case typesLogueo.logout:
             return{
                 
             }

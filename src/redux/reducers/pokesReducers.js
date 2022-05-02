@@ -4,33 +4,33 @@ const initialState = {
     plantas: []
 }
 
-export const plantasReducers = (state = initialState, action) => {
+export const pokesReducers = (state = initialState, action) => {
     switch (action.type) {
-        case typesPlantas.add:
+        case typesPokes.add:
             return {
-                plantas: [action.payload]
+                pokes: [action.payload]
             }
-         case typesPlantas.addFormik:
+         case typesPokes.addFormik:
                 return {
-                    plantas: [action.payload]
+                    pokes: [action.payload]
                 }
-        case typesPlantas.list:
+        case typesPokes.list:
             return {
-                plantas: [...action.payload]
+                pokes: [...action.payload]
             }
 
-        case typesPlantas.edit:
+        case typesPokes.edit:
             return {
                 ...state
             }
 
-        case typesPlantas.delete:
+        case typesPokes.delete:
             return {
-                plantas: state.plantas.filter(p => p.codigo !== action.payload)
+                pokes: state.pokes.filter(poke => poke.codigo !== action.payload)
             }
-            case typesPlantas.search:
+            case typesPokes.search:
                 return {
-                    plantas: action.payload
+                    pokes: action.payload
                 }   
         default:
             return state

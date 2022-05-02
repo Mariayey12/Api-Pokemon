@@ -1,6 +1,5 @@
 import { typesLogueo } from "../types/types";
 
-
 export const logueoReducers =(state ={}, action)=>{
     switch (action.type) {
         case typesLogueo.logueo:

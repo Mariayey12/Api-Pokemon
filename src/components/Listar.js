@@ -19,7 +19,7 @@ const Listar = () => {
 
     const editar = (codigo) => {
         //--------t=conseguir los datos de ese objeto con ese codigo--------------//
-        const traerPokemon = pokes.find(t => t.codigo === codigo)
+        const traerPokemon = pokes.find(element=> element.codigo === codigo)
 
         setModal(true)
         setEnviarDatosModal(traerPokemon)
@@ -34,30 +34,30 @@ const Listar = () => {
                 </thead>
                 <tbody>
                     {
-                        pokes.map((poke, index) => (
+                        pokes.map((pok, index) => (
                             <tr key={index}>
                                 <td>
                                     <ReactImageMagnify {...{
                                         smallImage: {
                                             alt: 'Wristwatch by Ted Baker London',
                                             isFluidWidth: true,
-                                            src: poke.foto
+                                            src: pok.foto
                                         },
                                         largeImage: {
-                                            src: poke.foto,
+                                            src: pok.foto,
                                             width: 1200,
                                             height: 1800
                                         }
                                     }} />
                                 </td>
-                                <td>{poke.nombre}</td>
-                                <td>{poke.codigo}</td>
-                                <td>{poke.tipo}</td>
+                                <td>{pok.nombre}</td>
+                                <td>{pok.codigo}</td>
+                                <td>{pok.tipo}</td>
                                 
                                 <td>
-                                    <Button margin={10} onClick={() => dispatch(deleteAsync(poke.codigo))}> <Image onClick={() => dispatch(deleteAsync(poke.codigo))} width={20} src='https://res.cloudinary.com/danimel/image/upload/v1646015682/trash_2_vcdean.png' /> </Button>
+                                    <Button margin={10} onClick={() => dispatch(deleteAsync(pok.codigo))}> <Image onClick={() => dispatch(deleteAsync(pok.codigo))} width={10} src='https://res.cloudinary.com/danimel/image/upload/v1646015682/trash_2_vcdean.png' /> </Button>
 
-                                    <Button margin={10} onClick={() => editar(poke.codigo)}> <Image onClick={() => editar(poke.codigo)} width={20} src='https://res.cloudinary.com/danimel/image/upload/v1646015685/edit_nh7sll.png' /></Button>
+                                    <Button margin={10} onClick={() => editar(pok.codigo)}> <Image onClick={() => editar(pok.codigo)} width={10} src='https://res.cloudinary.com/danimel/image/upload/v1646015685/edit_nh7sll.png' /></Button>
                                 </td>
 
                             </tr>

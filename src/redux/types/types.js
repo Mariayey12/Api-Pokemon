@@ -1,5 +1,5 @@
 export const typesLogueo ={
-    login: 'login',
+    logueo: 'login',
     logout: 'logout',
     
 }

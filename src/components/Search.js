@@ -3,7 +3,7 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import * as Yup from 'yup'
-import { searchAsync } from '../redux/actions/actionPlantas';
+import { searchAsync } from '../redux/actions/actionPokes';
 import List from './List';
 
 const Search = () => {

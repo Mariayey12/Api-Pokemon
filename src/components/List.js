@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Button, Image, Table } from 'react-bootstrap';
 import ReactImageMagnify from 'react-image-magnify';
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteAsync, listAsyn } from '../redux/actions/actionPlantas';
+import { deleteAsync, listAsyn } from '../redux/actions/actionPokes';
 import Edit from './Edit';
 
 const List = () => {

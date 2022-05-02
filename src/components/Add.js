@@ -3,7 +3,7 @@ import { Button, Form, Image } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { FileUp } from '../helpers/FileUp';
 import { useForm } from '../Hooks/useForm';
-import { addAsync } from '../redux/actions/actionPlantas';
+import { addAsync } from '../redux/actions/actionPokes';
 import List from './List';
 
 const Add = () => {

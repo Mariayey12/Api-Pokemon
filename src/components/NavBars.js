@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import { logoutAsync } from '../redux/actions/actionLogin';
+import { logoutAsync } from '../redux/actions/actionLogueo';
 
 const NavBars = () => {
 
@@ -42,7 +42,7 @@ const NavBars = () => {
                         </Link></Nav.Link>
                     
                     </Nav>
-                    <Nav.Link><Link to="/cards">
+                    <Nav.Link><Link to="/cardpokemon">
                             Tarjetas
                         </Link></Nav.Link>
                     <Nav.Link onClick={handleLogout}>Logout</Nav.Link>

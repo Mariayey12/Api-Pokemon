@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, Form, Modal } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { useForm } from '../Hooks/useForm';
-import { editAsync } from '../redux/actions/actionPlantas';
+import { editAsync } from '../redux/actions/actionPokes';
 
 const Edit = ({ modal, setModal }) => {
 

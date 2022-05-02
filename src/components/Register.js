@@ -3,7 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useForm } from '../Hooks/useForm';
-import { registerAsync} from '../redux/actions/actionRegister';
+import { registerAsync} from '../redux/actions/actionRegistro';
 import"../../style/Registro.css"
 
 const Register = () => {

@@ -7,9 +7,9 @@ import { registroReducers } from "../reducers/registroReducers";
 const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
 
 const reducersEnviar = combineReducers({
-        login: logueoReducers,
-        register: registroReducers,
-        plantas: pokesReducers,
+        logueo: logueoReducers,
+        registro: registroReducers,
+        pokes: pokesReducers,
    
 
 })

@@ -1,33 +1,33 @@
 import { addDoc, collection, deleteDoc, doc, getDocs, query, updateDoc, where } from "firebase/firestore"
 import { baseDato } from "../../Firebase/firebaseConfig"
-import { typesPlantas } from "../types/types"
+import { typesPokes } from "../types/types"
 
 
 //--------------Search------------------//
 export const searchAsync = (search)=>{
     return async(dispatch)=>{
-        const traerPlantas = collection(baseDato, "plantasBD")
-        const q = query(traerPlantas, where("nombre", ">=", search), where("nombre", "<=", search + '~'))
-        const datosPlanta = await getDocs(q)
+        const traerPokemon = collection(baseDato, "pokemonBD")
+        const q = query(traerPokemon, where("nombre", ">=", search), where("nombre", "<=", search + '~'))
+        const datosPokemon = await getDocs(q)
  
-        const planta = []
-        datosPlanta.forEach((docu =>{
-            planta.push(docu.data())
+        const pokemon = []
+        datosPokemon.forEach((docu =>{
+            pokemon.push(docu.data())
         }))
-        dispatch(searchSync(planta))
+        dispatch(searchSync(pokemon))
     }
 }
 
-export const searchSync = (plantasBuscar)=>{
+export const searchSync = (pokesBuscar)=>{
     return{
-        type: typesPlantas.search,
-        payload: plantasBuscar
+        type: typesPokes.search,
+        payload: pokesBuscar
     }
 }
 
 
 //---------------------Edit-----------//
-export const editAsync = (codigo, planta)=>{
+export const editAsync = (codigo, poke)=>{
    // console.log(codigo, planta)
     return async (dispatch)=>{
         const  colleccionTraer = collection(baseDato, "plantasBD")

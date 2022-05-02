@@ -1,14 +1,7 @@
-# Descripcion del proyecto 
-
-
-#  App-Pokemon
-
-
-
-
+# Project description
+Application that allows you to log in and register the user through google and facebook with firbase, it allows you to see the list of pokemon by name, image, id, name, it also allows you to insert delete edit and list images.
 
 ## Requerimientos
-
 Para poder ejecutar la aplicación en local debes instalar [NodeJs](https://nodejs.org)
 
 ## 🔥 Instalación

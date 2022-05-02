@@ -9,7 +9,7 @@ import {
   loginGoogle,
 } from "../redux/actions/actionLogueo";
 import "../../style/Login.css";
-const Login = () => {
+const Logueo = () => {
   const dispatch = useDispatch();
   const [values, handleInputChange, reset] = useForm({
     email: "",
@@ -97,4 +97,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Logueo;

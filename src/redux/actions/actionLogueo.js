@@ -76,7 +76,7 @@ export const loginEmailPassAsync = (email, password)=>{
 
 export const loginSincronico = (email, password)=>{
     return{
-        type: typesLogin.login,
+        type: typesLogueo.logueo,
         payload:{
             email, password
         } 

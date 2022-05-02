@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import * as Yup from 'yup'
 import { searchAsync } from '../redux/actions/actionPokes';
-import List from './List';
+import List from './Listar';
 
 const Search = () => {
     const dispatch = useDispatch()

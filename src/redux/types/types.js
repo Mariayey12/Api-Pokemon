@@ -1,14 +1,14 @@
-export const typesLogin ={
+export const typesLogueo ={
     login: 'login',
     logout: 'logout',
     
 }
 
-export const typesRegister ={
-    register: 'register'
+export const typesRegistro ={
+    registro: 'register'
 }
 
-export const typesPlantas ={
+export const typesPokes ={
     add: 'add',
     list: 'list',
     edit: 'edit',

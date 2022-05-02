@@ -1,5 +1,5 @@
 import { createUserWithEmailAndPassword, getAuth, updateProfile } from "firebase/auth"
-import { typesRegister } from "../types/types"
+import { typesRegistro } from "../types/types"
 
 export const registerAsync =(email, pass, name)=>{
     return(dispatch)=>{
@@ -20,7 +20,7 @@ export const registerAsync =(email, pass, name)=>{
 
 export const registerSync =(email, pass, name)=>{
     return{
-        type: typesRegister.register,
+        type: typesRegistro.registro,
         payload: {
             email, pass, name
         }

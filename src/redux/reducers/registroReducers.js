@@ -1,8 +1,8 @@
-import { typesRegister } from "../types/types";
+import { typesRegistro } from "../types/types";
 
-export const registerReducers =(state={}, action)=>{
+export const registroReducers =(state={}, action)=>{
     switch (action.type) {
-        case typesRegister.register:
+        case typesRegistro.registro:
             return{
                email: action.payload.email, 
                pass: action.payload.pass,

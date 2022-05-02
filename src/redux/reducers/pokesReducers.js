@@ -1,7 +1,7 @@
-import { typesPlantas } from "../types/types";
+import { typesPokes } from "../types/types";
 
 const initialState = {
-    plantas: []
+    pokes: []
 }
 
 export const pokesReducers = (state = initialState, action) => {

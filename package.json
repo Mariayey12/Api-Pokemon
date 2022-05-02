@@ -1,4 +1,5 @@
 {
+  "homepage": "https://yourusername.github.io/repository-name",
   "name": "ejercicios-14-03-2022",
   "version": "1.0.0",
   "description": "",
@@ -6,7 +7,9 @@
   "scripts": {
     "test": "react-scripts test",
     "start": "webpack server --mode development --open",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "predeploy": " npm run build",
+    "deploy": "gh-pages  -d build"
   },
   "keywords": [],
   "author": "",

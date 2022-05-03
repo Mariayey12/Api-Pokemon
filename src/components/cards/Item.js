@@ -15,14 +15,17 @@ export const Item = ({ url }) => {
           <div className="card-header">
             <h5 className="card-title" >{data.id}</h5>
           </div>
-          <div className="card-body">
-            <img src={data.sprites.front_default} alt="pokemon"/>
+          <div className="card-body" >
+            <img src={data.sprites.front_default}   alt="pokemon"/>
+           
           </div>
 
-          <div className="card-footer" >
+          <div className="card-footer">
+
             <p className="card-text text-capitalize" >{data.name}</p>
+           
           </div>
-          <Modal id={`id${data.id}`} titulo={data.name} contenido={data.effect_entries} />
+          <Modal id={`id${data.id}`} titulo={data.name}  contenido={data.effect_entries} />
         </div>
       }
     </div>

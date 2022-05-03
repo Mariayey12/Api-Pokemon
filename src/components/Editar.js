@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Button, Form, Modal } from 'react-bootstrap';
+import { Button, Form, Modal,setModal } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { useForm } from '../Hooks/useForm';
 import { editAsync } from '../redux/actions/actionPokes';
 
-const Editar = ({ modal, setModal }) => {
+const Editar = ({ modal, setModal}) => {
 
     const dispatch = useDispatch()
     const [show, setShow] = useState(true);
@@ -33,7 +33,7 @@ const Editar = ({ modal, setModal }) => {
             <>
                 <Modal show={show} onHide={handleClose}>
                     <Modal.Header closeButton>
-                        <Modal.Title>Editar </Modal.Title>
+                        <Modal.Title>Editar</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         <Form onSubmit={()=>handleSubmit()}>
@@ -46,8 +46,6 @@ const Editar = ({ modal, setModal }) => {
 
                                 <Form.Label>Codigo</Form.Label>
                                 <Form.Control type="text" name="codigo" placeholder="El codigo contine dos letras y 3 numeros" value={codigo} onChange={handleInputChange} />
-
-                            
                             </Form.Group>
 
                             <Button variant="secondary" onClick={handleClose}>

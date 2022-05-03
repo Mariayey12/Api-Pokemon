@@ -8,6 +8,7 @@ import {
   loginFacebook,
   loginGoogle,
 } from "../redux/actions/actionLogueo";
+
 import "../../style/Login.css";
 const Logueo = () => {
   const dispatch = useDispatch();
@@ -91,7 +92,10 @@ const Logueo = () => {
           </Container>
         </Container>
         <Button variant="danger" type="submit">
-        <Link to="/register">Registrarse</Link></Button>
+
+        <Link to="/register">Registrarse</Link>
+        
+        </Button>
       </Form>
     </div>
   );

@@ -67,7 +67,7 @@ const Listar = () => {
                 </tbody>
             </Table>
             {
-                modal === true ? <Edit modal={enviarDatosModal} setModal={setModal}/> : ''
+                modal === true ? <Editar modal={enviarDatosModal} setModal={setModal}/> : ''
             }
         </div>
     );

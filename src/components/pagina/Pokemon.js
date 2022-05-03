@@ -5,13 +5,13 @@ import { Cards } from '../cards/Cards'
 
 
 const Pokemon =()=>{
-const [url, setUrl]= useState('https://pokeapi.co/api/v2/pokemon')
+const [url, setUrl]= useState('https://pokeapi.co/api/v2/pokemon/')
 const  estado=UseFetch (url)
 const {cargando,data}=estado
 cargando? console.log ('cargando'): console.log(data.results)
 return (
     <div>
-<h1> Esta es la pagina de Pokemon</h1>
+<h1>Pokemon</h1>
 
 
 {

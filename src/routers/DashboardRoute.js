@@ -5,7 +5,7 @@ import Listar from '../components/Listar';
 import NavBars from '../components/NavBars';
 import Search from '../components/Search';
 import Pokemon from'../components/pagina/Pokemon'
-import {Item} from '../components/cards/Item.js';
+import {Item} from '../components/cards/Item';
 import {CardPokemon } from '../components/cards/CardPokemon';
 import Agregar from '../components/Agregar';
 import Form from '../components/form';

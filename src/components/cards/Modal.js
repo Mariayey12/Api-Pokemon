@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Modal(id,titulo,contenido) {
+function Modal({id,titulo,contenido}) {
     return (
         <div>
      

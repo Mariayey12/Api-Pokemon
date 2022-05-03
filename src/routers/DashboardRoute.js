@@ -7,7 +7,7 @@ import Search from '../components/Search';
 import Pokemon from'../components/pagina/Pokemon'
 import {CardPokemon } from '../components/cards/CardPokemon';
 import Agregar from '../components/Agregar';
-
+import Form from '../components/form';
 
 
 const DashboardRoute = () => {
@@ -21,6 +21,7 @@ const DashboardRoute = () => {
                     <Route path="/list" element={<Listar/>} />
                     <Route path="/pokemon" element={<Pokemon/>} />
                     <Route path="/cardpokemon" element={<CardPokemon/>} />
+                    <Route path="/form" element={<Form/>}/>
                     <Route path="/search" element={<Search/>}/>
                     <Route path="*" element={<Navigate to="/"/>}/>
                 </Routes>

@@ -21,6 +21,8 @@ return (
     <div>
     <Cards results={data.results}/>
     <div className="container m-auto">
+    
+   
 
 <button onClick={()=>setUrl(data.previous)} className="m-1  btn btn-dark">Anterior</button>
 <button onClick={()=>setUrl(data.next)} className="m-1  btn btn-dark">Siguiente</button>

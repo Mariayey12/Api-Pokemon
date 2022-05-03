@@ -22,7 +22,7 @@ export const Item = ({ url }) => {
           <div className="card-footer" >
             <p className="card-text text-capitalize" >{data.name}</p>
           </div>
-          <Modal id={`id${data.id}`} titulo={data.name} contenido='' />
+          <Modal id={`id${data.id}`} titulo={data.name} contenido={data.effect_entries} />
         </div>
       }
     </div>

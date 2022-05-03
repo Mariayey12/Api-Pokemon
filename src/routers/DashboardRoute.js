@@ -5,10 +5,11 @@ import Listar from '../components/Listar';
 import NavBars from '../components/NavBars';
 import Search from '../components/Search';
 import Pokemon from'../components/pagina/Pokemon'
-import {Item} from '../components/cards/Item';
+import Items from '../components/pagina/Items';
 import {CardPokemon } from '../components/cards/CardPokemon';
 import Agregar from '../components/Agregar';
 import Form from '../components/form';
+import { Item } from '../components/cards/Item';
 
 
 const DashboardRoute = () => {
@@ -22,7 +23,8 @@ const DashboardRoute = () => {
                     <Route path="/list" element={<Listar/>} />
                     <Route path="/pokemon" element={<Pokemon/>} />
                     <Route path="/cardpokemon" element={<CardPokemon/>} />
-                    <Route path="/item" element={<Item />} />
+                    <Route path="/item" element={<Item/>} />
+                    <Route path="/items" element={<Items/>} />
                     <Route path="/form" element={<Form/>}/>
                     <Route path="/search" element={<Search/>}/>
                     <Route path="*" element={<Navigate to="/"/>}/>

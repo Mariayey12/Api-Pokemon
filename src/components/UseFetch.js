@@ -15,7 +15,7 @@ getDatos(url)
 setResultado ({ cargando: true,data: null})
 const resp=await fetch(url)
 const data = await resp.json()
-    setResultado({cargando:false, data})
+    setResultado({cargando:false,data})
     }
     catch(e) {
         console.log(e)

@@ -2,6 +2,8 @@ import React from "react";
 import { CardPokemon } from "./CardPokemon";
 import '../../../style/main.css';
 
+
+
 export const Cards = ({ results }) =>{
   return (
     <div className="container">
@@ -9,8 +11,11 @@ export const Cards = ({ results }) =>{
         {
         results.map(p => (
           <li className="card-item" key={p.name}>
-            <CardPokemon url={p.url} />   
+            <CardPokemon url={p.url} />  
+             
           </li>
+          
+          
         )
       
       )
@@ -19,3 +24,6 @@ export const Cards = ({ results }) =>{
     </div>
   )
 }
+
+
+

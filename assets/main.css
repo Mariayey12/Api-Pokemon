@@ -202,6 +202,24 @@ label{
   padding: 0;
 }
 
+.items{
+
+    display: inline;
+    padding:1rem;
+}
+.card{
+    box-shadow: 1px  1px 5px gray;
+    margin: 5px;
+}
+.items{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: nome;
+  margin: 0;
+  padding: 0;
+}
+
 .cards-items{
 
     display: inline;

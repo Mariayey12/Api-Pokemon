@@ -18,10 +18,10 @@ class Form extends React.Component{
 
   fetchJale = async () => {
     //let res = await fetch('https://pokeapi.co/api/v2/pokemon/venusaur')
-    let res = await fetch(`https://pokeapi.co/api/v2/pokemon${this.state.name}`)
+    let res = await fetch(`https://pokeapi.co/api/v2/pokemon/${this.state.name}`)
     let data = await res.json()
 
-    //console.log(data['sprites']['front_default'])
+    console.log(data['sprites']['front_default'])
     console.log(data.name);
     console.log(data.sprites.front_default)
     this.setState({

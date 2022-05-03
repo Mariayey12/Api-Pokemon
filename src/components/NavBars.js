@@ -36,6 +36,9 @@ const NavBars = () => {
                         <Nav.Link><Link to="/pokemon">
                             Pokemon
                         </Link></Nav.Link>
+                        <Nav.Link><Link to="/item">
+                            Item
+                        </Link></Nav.Link>
 
                         <Nav.Link><Link to="/search">
                             Search

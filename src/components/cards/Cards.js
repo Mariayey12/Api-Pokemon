@@ -7,9 +7,9 @@ export const Cards = ({ results }) =>{
     <div className="container">
       <ul className="cards">
         {
-        results.map(poke => (
-          <li className="card-item" key={poke.name}>
-            <CardPokemon url={poke.url} />   
+        results.map(p => (
+          <li className="card-item" key={p.name}>
+            <CardPokemon url={p.url} />   
           </li>
         )
       

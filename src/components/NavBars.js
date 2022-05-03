@@ -42,9 +42,10 @@ const NavBars = () => {
                         </Link></Nav.Link>
                     
                     </Nav>
-                    <Nav.Link><Link to="/cardpokemon">
+                     {/*   <Nav.Link><Link to="/cardpokemon">
                             Tarjetas
-                        </Link></Nav.Link>
+                        </Link> </Nav.Link> */}
+
                     <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
                 </Container>
             </Navbar>

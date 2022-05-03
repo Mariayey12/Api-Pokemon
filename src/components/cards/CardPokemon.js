@@ -1,6 +1,6 @@
 import React from "react";
 import { UseFetch } from "../UseFetch";
-import { Cards} from "./Cards";
+import {Cards} from "../cards/Cards";
 
 export const CardPokemon = ({ url }) => {
   const estado = UseFetch(url);
@@ -15,7 +15,7 @@ export const CardPokemon = ({ url }) => {
             <h5 className="card-title" >{data.id}</h5>
           </div>
           <div className="card-body">
-            <img src="{data.sprites.front_default} " alt="pokemon"/>
+            <img src={data.sprites.front_default} alt="pokemon"/>
           </div>
 
           <div className="card-footer" >

@@ -1,6 +1,6 @@
 import React from "react";
 import { UseFetch } from "../UseFetch";
-
+import {Cards} from "../cards/Cards";
 
 export const CardPokemon = ({ url }) => {
   const estado = UseFetch(url);
